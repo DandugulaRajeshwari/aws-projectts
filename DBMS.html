@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Busters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>DBMS</h1>
+        <button class="btn test-skills" onclick="window.location.href='DBMS_quizz.html'">TEST YOUR SKILLS</button>
+        <select class="dropdown" id="channelDropdown">
+            <option selected disabled>BEST PREFERRED YOUTUBE CHANNELS</option>
+            <option value="https://www.youtube.com/watch?v=kBdlM6hNDAE&list=PLxCzCOWd7aiFAN6I8CuViBuCdJgiOkT2Y">Gate Smashers</option>
+            <option value="https://www.youtube.com/watch?v=eYpXCdvKwEQ&list=PLDzeHZWIZsTpukecmA2p5rhHM14bl2dHU">CodeHelp - by Babbar</option>
+            <option value="https://www.youtube.com/watch?v=YRnjGeQbsHQ&list=PLmXKhU9FNesR1rSES7oLdJaNFgmuj0SYV">KnowledgeGATE by Sanchit Sir</option>
+            <!-- Add more options with appropriate URLs -->
+        </select>
+    </div>
+    <script>
+        // JavaScript to handle redirection
+        const dropdown = document.getElementById('channelDropdown');
+
+        dropdown.addEventListener('change', function () {
+            const selectedValue = this.value;
+            if (selectedValue) {
+                window.location.href = selectedValue; // Redirects to the selected YouTube channel
+            }
+        });
+    </script>
+</body>
+</html>

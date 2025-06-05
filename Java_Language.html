@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Busters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JAVA</h1>
+        <button class="btn test-skills" onclick="window.location.href='java_quizz.html'">TEST YOUR SKILLS</button>
+        <select class="dropdown" id="channelDropdown">
+            <option selected disabled>BEST PREFERRED YOUTUBE CHANNELS</option>
+            <option value="https://www.youtube.com/watch?v=x1RCEvYRTz0&list=PL9ooVrP1hQOEe9EN119lMdwcBxcrBI1D3">Coursera</option>
+            <option value="https://www.youtube.com/watch?v=6ax67zHPMqM&list=PLHOHmxYGVYF3J6fLcP2YPOSTCYVLrdVR5">EDX</option>
+            <option value="https://www.youtube.com/watch?v=5rS-TvRbmuw&list=PLSFWNjZJVLmgAOs-UovscYtmnKYf5gX6I">Code Academy</option>
+            <!-- Add more options with appropriate URLs -->
+        </select>
+    </div>
+    <script>
+        // JavaScript to handle redirection
+        const dropdown = document.getElementById('channelDropdown');
+
+        dropdown.addEventListener('change', function () {
+            const selectedValue = this.value;
+            if (selectedValue) {
+                window.location.href = selectedValue; // Redirects to the selected YouTube channel
+            }
+        });
+    </script>
+</body>
+</html>
